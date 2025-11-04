@@ -1,8 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import HealthJourney from './app/HealthJourney';
-import Onboarding from './app/Onboarding';
+import HealthJourney from './app/healthJourney';
+import Onboarding from './app/onboarding';
 import SplashPage from './app/SplashPage';
 
 const Stack = createNativeStackNavigator();
