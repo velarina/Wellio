@@ -1,13 +1,13 @@
-import React from "react";
-import { View, Image, Text, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
-import { useNavigation } from "@react-navigation/native";
 import StartButton from "@/components/StartButton";
+import { useNavigation } from "@react-navigation/native";
+import React from "react";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 
 
 
 const { width, height } = Dimensions.get("window");
 
-const Onboarding3: React.FC = () => {
+export default function OnboardingThree() {
   const navigation = useNavigation();
 
   return (
@@ -29,8 +29,6 @@ const Onboarding3: React.FC = () => {
     </View>
   );
 };
-
-export default Onboarding3;
 
 const styles = StyleSheet.create({
   container: {

@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Image, Text, StyleSheet, Dimensions } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
-const Onboarding: React.FC = () => {
+export default function OnboardingOne() {
   return (
     <View style={styles.container}>
       <Image
@@ -21,8 +21,6 @@ const Onboarding: React.FC = () => {
     </View>
   );
 };
-
-export default Onboarding;
 
 const styles = StyleSheet.create({
   container: {

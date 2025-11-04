@@ -1,9 +1,9 @@
 import React from "react";
-import { View, Image, Text, StyleSheet, Dimensions } from "react-native";
+import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
-const Onboarding2: React.FC = () => {
+export default function OnboardingTwo() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Overthinking Terus{"\n"}Sampai Burnout?</Text>
@@ -21,8 +21,6 @@ const Onboarding2: React.FC = () => {
     </View>
   );
 };
-
-export default Onboarding2;
 
 const styles = StyleSheet.create({
   container: {

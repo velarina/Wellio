@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
 import {
-  View,
-  FlatList,
-  StyleSheet,
   Dimensions,
+  FlatList,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  StyleSheet,
+  View,
 } from "react-native";
-import Onboarding1 from "./onboarding1";
-import Onboarding2 from "./onboarding2";
-import Onboarding3 from "./onboarding3";
+import Onboarding1 from "./OnboardingOne";
+import Onboarding3 from "./OnboardingThree";
+import Onboarding2 from "./OnboardingTwo";
 
 const { width, height } = Dimensions.get("window");
 
