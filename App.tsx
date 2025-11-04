@@ -1,43 +1,26 @@
-import React, { FC } from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
+import HealthJourney from './app/HealthJourney';
+import Onboarding from './app/Onboarding';
+import SplashPage from './app/SplashPage';
 
-import Onboarding from "./app/onboarding";
-import HealthJourney from "./app/healthJourney";
-import SplashPage from "./app/splashScreen";
+const Stack = createNativeStackNavigator();
 
-export type RootStackParamList = {
-  SplashScreen: undefined;
-  Onboarding: undefined;
-  HealthJourney: undefined;
-};
+function RootStack() {
+  return (
+    <Stack.Navigator initialRouteName="splash">
+      <Stack.Screen name="splash" component={SplashPage} options={{headerShown:false}}/>
+      <Stack.Screen name="onboarding" component={Onboarding} options={{headerShown:false}}/>
+      <Stack.Screen name="healthjourney" component={HealthJourney} options={{headerShown:false}}/>
+    </Stack.Navigator>
+  );
+}
 
-console.log("SplashScreen rendered");
-
-const Stack = createStackNavigator<RootStackParamList>();
-
-const App: FC = () => {
+export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="SplashScreen">
-        <Stack.Screen
-          name="SplashScreen"
-          component={SplashPage}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Onboarding"
-          component={Onboarding}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="HealthJourney"
-          component={HealthJourney}
-          options={{ headerShown: false }}
-        />
-      </Stack.Navigator>
+      <RootStack />
     </NavigationContainer>
   );
-};
-
-export default App;
+}
